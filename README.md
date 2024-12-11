@@ -8,8 +8,6 @@ Author   : Techie Joe
 
 URL      : https://github.com/techie-joe/html
 
-LICENSE  : (See LICENSE.txt)
-
 ---
 
 Copyright © 2024 Tidloo.com
