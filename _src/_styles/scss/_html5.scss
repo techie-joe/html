@@ -1,0 +1,125 @@
+/*! Techie Joe's Base v0.1.0 | MIT License | https://github.com/techie-joe/base */
+
+@use "mixins" as mix;
+@use "colors" as *;
+@use "_html5.css";
+
+/* ------------------------------------- base : for html5 */
+
+@mixin _selection {
+  background: #5300c0;
+  color:#fff;
+}
+
+::selection { @include _selection; }
+::-moz-selection { @include _selection; }
+
+* { line-height: 1.2; margin:0; }
+
+p,pre,ul,ol { margin-top:1em; margin-bottom:1em; }
+
+li { margin: .3em 0; }
+
+hr {
+  border:1px solid #aaa;
+  border-bottom-color: #fff;
+}
+._dark hr {
+  border:1px solid #000;
+  border-bottom-color: #444;
+}
+
+#_html,
+#_body { /* doc */
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width:100%;
+  height:100%;
+  overflow: auto;
+  margin: 0;
+  font-size: 1rem;
+  @include mix.text-size-adjust(100%);
+}
+
+/* --------------------------------- default light theme */
+
+#_html {
+  color: $light-foreground;
+  background-color: $light-background;
+  h1,h2,h3,h4,h5,h6 { color: $light-titlecolor; }
+}
+
+._a a {
+  & {
+    transition: color 0.5s, background-color 0.5s;
+    color: $light-link-color;
+  }
+  &:hover { transition:none; }
+  &:visited { color: $light-link-color-visited; }
+}
+
+a._btnlink {
+  &,&:visited,&:active { color: inherit; }
+  &:hover {
+    color: $light-primary-button-fg;
+    background-color: $light-primary-button-bg;
+  }
+}
+
+/* ------------------------------------------ dark theme */
+
+._dark {
+
+  &#_html {
+    color: $dark-foreground;
+    background-color: $dark-background;
+    h1,h2,h3,h4,h5,h6 { color: $dark-titlecolor; }
+  }
+  &._a a {
+    & { color: $dark-link-color; }
+    &:visited { color: $dark-link-color-visited; }
+  }
+  
+  a._btnlink {
+    &,&:visited,&:active { color: inherit; }
+    &:hover {
+      color: $dark-primary-button-fg;
+      background-color: $dark-primary-button-bg;
+    }
+  }
+  
+}
+
+/* ----------------------------------------------- helper */
+
+._numb { @include mix.numb; }
+
+#_html ._btnlink {
+  @extend ._numb;
+  cursor: pointer;
+  display: inline-block;
+  padding: 5px 20px;
+  border-radius: 5px;
+  border: 1px solid #888;
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+._sans { font-family: Arial, sans-serif; }
+
+._mono { font-family: "Courier New", Courier, monospace; }
+
+._inblock { display:inline-block; }
+
+._text-center { text-align: center; }
+._text-right { text-align:right }
+
+._fixed { position:fixed; }
+
+._hide { display: none; }

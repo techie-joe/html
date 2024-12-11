@@ -1,0 +1,15 @@
+@use "colors" as *;
+
+/* Default (light theme) */
+html {
+  background-color: $light-background;
+  color: $light-foreground;
+}
+
+/* Dark theme */
+@media (prefers-color-scheme: dark) {
+  html {
+    background-color: $dark-background;
+    color: $dark-foreground;
+  }
+}

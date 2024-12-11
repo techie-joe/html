@@ -1,0 +1,45 @@
+._errorpage {
+  
+  &#_html ._layout {
+    font-family: sans-serif;
+    position: absolute;
+    margin:0;
+    display: table;
+    height: 100%;
+    text-align: center;
+    width: 100%;
+  }
+  
+  #_main {
+    display: table-cell;
+    vertical-align: middle;
+    margin: 0 auto;
+    padding: 1em;
+  }
+  
+  #_h1 {
+    font-size: 2em;
+    font-weight: 400;
+  }
+  
+  #_p {
+    margin: 1em auto 2.3em auto;
+    width: 280px;
+  }
+
+} // _errorpage
+
+@media only screen and (max-width: 280px) {
+
+  ._errorpage {
+
+    #_main { width: 95%; }
+
+    #_h1 {
+      font-size: 1.5em;
+      margin: 0 0 0.3em;
+    }
+
+  } // _errorpage
+
+}
