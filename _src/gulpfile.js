@@ -71,7 +71,8 @@ const file = require('gulp-file');
 function htaccess() {
   return file(
     '.htaccess',
-    `ErrorDocument 404 ${root}404.html`,
+    `ErrorDocument 404 ${root}404.html\n`+
+    `ErrorDocument 500 ${root}500.html`,
     { src: true } // indicates that the string provided as the second argument should be treated as file contents rather than a file path
   )
   .pipe(dest(_dest.root));
