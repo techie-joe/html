@@ -15,18 +15,18 @@
 ::selection { @include _selection; }
 ::-moz-selection { @include _selection; }
 
-* { line-height: 1.2; margin:0; }
+* { line-height: 1.2; margin: 0; }
 
-p,pre,ul,ol { margin-top:1rem; margin-bottom:1rem; }
+p,pre,ul,ol { margin-top: 1rem; margin-bottom: 1rem; }
 
-li { margin: .3rem 0; }
+li { margin: .3em 0; }
 
 hr {
-  border:1px solid #aaa;
+  border: 1px solid #aaa;
   border-bottom-color: #fff;
 }
 ._dark hr {
-  border:1px solid #000;
+  border: 1px solid #000;
   border-bottom-color: #444;
 }
 
@@ -38,8 +38,8 @@ hr {
   bottom: 0;
   right: 0;
   left: 0;
-  width:100%;
-  height:100%;
+  width: 100%;
+  height: 100%;
   overflow: auto;
   margin: 0;
   font-size: 1em;
@@ -51,7 +51,7 @@ hr {
 #_html {
   color: $light-foreground;
   background-color: $light-background;
-  h1,h2,h3,h4,h5,h6 { color: $light-titlecolor; }
+  h1,h2,h3,h4,h5,h6 { color: $light-color-1; }
 }
 
 ._a a {
@@ -66,8 +66,8 @@ hr {
 a._btnlink {
   &,&:visited,&:active { color: inherit; }
   &:hover {
-    color: $light-primary-button-fg;
-    background-color: $light-primary-button-bg;
+    color: $light-button-fg-1;
+    background-color: $light-button-bg-1;
   }
 }
 
@@ -78,7 +78,7 @@ a._btnlink {
   &#_html {
     color: $dark-foreground;
     background-color: $dark-background;
-    h1,h2,h3,h4,h5,h6 { color: $dark-titlecolor; }
+    h1,h2,h3,h4,h5,h6 { color: $dark-color-1; }
   }
   &._a a {
     & { color: $dark-link-color; }
@@ -88,8 +88,8 @@ a._btnlink {
   a._btnlink {
     &,&:visited,&:active { color: inherit; }
     &:hover {
-      color: $dark-primary-button-fg;
-      background-color: $dark-primary-button-bg;
+      color: $dark-button-fg-1;
+      background-color: $dark-button-bg-1;
     }
   }
   
@@ -104,7 +104,7 @@ a._btnlink {
   cursor: pointer;
   display: inline-block;
   padding: .5em 1em;
-  border-radius: 5px;
+  border-radius: .25em;
   border: 1px solid #888;
   text-decoration: none;
   &:hover {
@@ -116,11 +116,11 @@ a._btnlink {
 
 ._mono { font-family: "Courier New", Courier, monospace; }
 
-._inblock { display:inline-block; }
+._inblock { display: inline-block; }
 
 ._text-center { text-align: center; }
-._text-right { text-align:right }
+._text-right { text-align: right }
 
-._fixed { position:fixed; }
+._fixed { position: fixed; }
 
 ._hide { display: none; }

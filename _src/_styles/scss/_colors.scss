@@ -1,37 +1,39 @@
 /*
+  |  |
 01234567
 fedcba98
+  |  |
 */
 
-$theme-color      : #222;
+$theme-color       : #222;
 
-$light-background : #ddd;
-$light-foreground : #555;
-$light-titlecolor : #222;
+$light-background  : #ddd;
+$light-foreground  : #555;
+$light-color-1     : #222;
 
-$dark-background  : #222;
-$dark-foreground  : #aaa;
-$dark-titlecolor  : #ddd;
+$dark-background   : #222;
+$dark-foreground   : #aaa;
+$dark-color-1      : #ddd;
 
-$light-primary-button-bg   : #bbb;
-$light-primary-button-fg   : #222;
+$light-button-bg-1 : #bbb;
+$light-button-fg-1 : #222;
 
-$light-secondary-button-bg : #ccc;
-$light-secondary-button-fg : #222;
+$light-button-bg-2 : #ccc;
+$light-button-fg-2 : #333;
 
-$dark-primary-button-bg    : #444;
-$dark-primary-button-fg    : #ddd;
+$dark-button-bg-1  : #444;
+$dark-button-fg-1  : #ddd;
 
-$dark-secondary-button-bg  : #333;
-$dark-secondary-button-fg  : #ddd;
+$dark-button-bg-2  : #333;
+$dark-button-fg-2  : #ccc;
 
-// $link-color         : #0044cc;
-// $link-color-visited : #551a8b;
-// $link-color-hover   : #ff6600;
-// $link-color-active  : #cc0000;
+// $link-color         : #04c;
+// $link-color-visited : #80c;
+// $link-color-hover   : #f60;
+// $link-color-active  : #c00;
 
-$light-link-color         : #0044cc;
-$light-link-color-visited : #551a8b;
+$light-link-color         : #04c;
+$light-link-color-visited : #80c;
 
-$dark-link-color         : #4e89ff;
-$dark-link-color-visited : #bf7bff;
+$dark-link-color         : #4986ff;
+$dark-link-color-visited : #c249ff;
