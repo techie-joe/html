@@ -5,7 +5,7 @@ block append vars
   -
     header      = `Texts`
     title       = `${header} | ${name}`
-    description = `Text sizes and spacing has been taken care of.`
+    description = `Text sizes and spacing has been carefully taken care of.`
     url         = url+`/texts.html`
 
     og_title       = title
@@ -22,6 +22,8 @@ block append style
       background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="1px" height="10px"><rect width="1px" height="0.75px" fill="%23A9790655" /></svg>');
       background-repeat: repeat;
     }
+    #_header { max-width:960px }
+    #_header,
     #_main { margin:0 auto; padding:0 1rem; }
     .demo .u { margin: 0 2px; }
 
@@ -43,6 +45,7 @@ block main
   main#_main
     .gridlines
       section
+        p._hero Super hero text
         h1._h1 Heading example #1
         h2._h2 Heading example #2
         h3._h3 Heading example #3
@@ -91,3 +94,8 @@ block main
           +g1
           +g2
           +g1
+
+    p: hr
+
+    footer#_footer
+      p._text-centerx &copy; Copyright
