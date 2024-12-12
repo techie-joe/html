@@ -3,7 +3,7 @@
 ---
 
 Template : HTML Web Template  
-Codename : html - v0.0.1  
+Codename : html - v0.1.0  
 Author   : Techie Joe  
 
 URL      : https://github.com/techie-joe/html  
