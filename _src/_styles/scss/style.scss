@@ -7,8 +7,9 @@ html { box-shadow: 0 3px red inset; }
 #_html,
 #_body { @extend ._sans; }
 
-#_html ._layout { margin:0 auto; }
-#_main { margin:1em; }
+#_main { max-width:960px; }
+
+#_main { margin:1em auto; }
 
 @media only screen and (max-width: 499px) {
 }
