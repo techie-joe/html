@@ -72,7 +72,8 @@ function htaccess() {
   return file(
     '.htaccess',
     `ErrorDocument 404 ${root}404.html\n`+
-    `ErrorDocument 500 ${root}500.html`,
+    `ErrorDocument 500 ${root}500.html\n`+
+    `ErrorDocument 503 ${root}503.html`,
     { src: true } // indicates that the string provided as the second argument should be treated as file contents rather than a file path
   )
   .pipe(dest(_dest.root));
