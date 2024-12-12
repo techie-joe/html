@@ -1,0 +1,18 @@
+extends html
+
+block append style
+  +css(homeUrl+'assets/css/demo.css?v='+version)
+  style.
+    #_header .layout { margin:1em; }
+  //- 
+
+block header
+  header#_header
+    .layout
+      h1 #{header}
+      p #{description}
+    hr
+
+block main
+  main#_main
+    article

@@ -31,8 +31,15 @@ block append style
     #_html       .pages a:hover { background:#bbb; color:#000; }
     #_html._dark .pages a:hover { background:#444; color:#fff; }
 
-    #_header    { background: #181818; color: #aaa; position:relative; padding:3em 4em; margin-bottom:2em; }
-    #_header h1 { color: #fff; max-width:13.5em; }
+    #_header    { position:relative; padding:3em 4em; margin-bottom:2em; }
+    #_header h1 { max-width:13.5em; }
+
+    #_header    { color: #333; background: #ccc; }
+    #_header h1 { color: #000; }
+
+    ._dark #_header    { color: #aaa; background: #111; }
+    ._dark #_header h1 { color: #fff; }
+
     #_header .p { max-width: 500px; }
     #_html .startNow ._btnlink:hover { background:#777;color:#fff; }
 
@@ -102,7 +109,7 @@ block main
 
       h2 Easy website creation with intuitive building blocks
       
-      p Our website builder comes with #[b built-in building blocks], making it intuitively easy to create your website. No lengthy manual or confusing rules -- just dive in and start building. And for those who are curious or need a bit more guidance, we have comprehensive demo articles to help you out.
+      p Our website builder comes with built-in #[b building blocks], making it intuitively easy to create your website. No lengthy manual or confusing rules -- just dive in and start building. And for those who are curious or need a bit more guidance, we have comprehensive demo articles to help you out.
 
       nav.pages
         +_a("views.html")| Views

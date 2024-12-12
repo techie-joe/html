@@ -44,9 +44,18 @@ hr {
   height: 100%;
   overflow: auto;
   margin: 0;
-  font-size: 1em;
+  font-size:1.021em;
   @include mix.text-size-adjust(100%);
 }
+
+._h1,._font-1 { font-size:5.140rem }
+._h2,._font-2 { font-size:3.840rem }
+._h3,._font-3 { font-size:3.070rem }
+._h4,._font-4 { font-size:2.195rem }
+._h5,._font-5 { font-size:1.705rem }
+._h6,._font-6 { font-size:1.180rem }
+
+._sup { line-height: 0.6em }
 
 /* ---------------------------------- default light theme */
 

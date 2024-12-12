@@ -1,3 +1,9 @@
+mixin repeat(x)
+	- var n = 0
+	while n < x
+		- n++
+		block
+
 mixin php(uri)
 	| <?php include "#{uri}" ?>
 

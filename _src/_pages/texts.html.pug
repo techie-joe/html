@@ -1,0 +1,94 @@
+extends ../_templates/demo
+
+block append vars
+  include _demo-vars
+  -
+    header      = `Texts`
+    title       = `${header} | ${name}`
+    description = `Text sizes and spacing have been taken care of.`
+    url         = url+`/texts.html`
+
+    og_title       = title
+    og_description = description
+    og_url         = url
+  //- 
+
+block append style
+  style.
+    .gridlines {
+      min-height: 100px;
+      padding-bottom: 10px;
+      border-top: 1px solid #000;
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="1px" height="10px"><rect width="1px" height="0.75px" fill="%23A9790655" /></svg>');
+      background-repeat: repeat;
+    }
+    #_main { margin:0 auto; padding:0 1rem; }
+    .demo .u { margin: 0 2px; }
+
+    .io  { background:#88888877; padding:0 2px; }
+    .io2 { background:#88888822; padding:0 2px; }
+
+  //- 
+
+block main
+
+  mixin g1
+    span.io Hg#[sup._sup 2]
+    br
+
+  mixin g2
+    span.io2 &nbsp;
+    br
+
+  main#_main
+    .gridlines
+      section
+        h1._h1 Heading example #1
+        h2._h2 Heading example #2
+        h3._h3 Heading example #3
+        h4._h4 Heading example #4
+        h5._h5 Heading example #5
+        h6._h6 Heading example #6
+        b  Heading example #7
+    hr(style="margin:1rem auto")
+    .gridlines
+      .g.demo
+        .u
+          +repeat(7)
+            +g1
+            +g2
+          +g1
+        .u._font-6
+          +repeat(4)
+            +g1
+            +g2
+            +g2
+          +g1
+        .u._font-5
+          +repeat(4)
+            +g1
+            +g2
+          +g1
+        .u._font-4
+          +g1
+          +g2
+          +g2
+          +g1
+          +g2
+          +g2
+          +g1
+        .u._font-3
+          +g1
+          +g2
+          +g1
+          +g2
+          +g1
+        .u._font-2
+          +g1
+          +g2
+          +g2
+          +g1
+        .u._font-1
+          +g1
+          +g2
+          +g1
