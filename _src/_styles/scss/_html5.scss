@@ -5,7 +5,7 @@
 @use "colors" as *;
 @use "_html5.css";
 
-/* ------------------------------------- base : for html5 */
+/* ------------------------------------------------- base */
 
 @mixin _selection {
   background: #5300c0;
@@ -46,7 +46,7 @@ hr {
   @include mix.text-size-adjust(100%);
 }
 
-/* --------------------------------- default light theme */
+/* ---------------------------------- default light theme */
 
 #_html {
   color: $light-foreground;
@@ -71,7 +71,7 @@ a._btnlink {
   }
 }
 
-/* ------------------------------------------ dark theme */
+/* ------------------------------------------- dark theme */
 
 ._dark {
 

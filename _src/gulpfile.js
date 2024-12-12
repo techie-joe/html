@@ -27,7 +27,7 @@ const rename = require("gulp-rename");
 const pug = require("gulp-pug");
 function html() {
   return src(_src.page + '/**/*.html.pug')
-    .pipe(pug({ pretty: true }))
+    .pipe(pug({ pretty: false }))
     .pipe(rename(function (path) {
       path.basename = path.basename.substring(0, path.basename.lastIndexOf('.'));
     }))
@@ -35,7 +35,7 @@ function html() {
 }
 function php() {
   return src(_src.page + '/**/*.php.pug')
-    .pipe(pug({ pretty: true }))
+    .pipe(pug({ pretty: false }))
     .pipe(rename(function (path) {
       path.basename = path.basename.substring(0, path.basename.lastIndexOf('.'));
       path.extname = '.php';
