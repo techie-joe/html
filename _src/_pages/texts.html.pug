@@ -17,7 +17,7 @@ block append style
   style.
     .gridlines {
       min-height: 100px;
-      padding-bottom: 10px;
+      padding-bottom: 1px;
       border-top: 1px solid #000;
       background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="1px" height="10px"><rect width="1px" height="0.75px" fill="%23A9790655" /></svg>');
       background-repeat: repeat;
@@ -27,25 +27,26 @@ block append style
     #_main { margin:0 auto; padding:0 1rem; }
     .demo .u { margin: 0 2px; }
 
-    .io  { background:#88888877; padding:0 2px; }
-    .io2 { background:#88888822; padding:0 2px; }
+    .io  { background:#88888844; padding:0 2px; }
 
   //- 
 
 block main
 
-  mixin g1
-    span.io Hg#[sup._sup 2]
-    br
-
-  mixin g2
-    span.io2 &nbsp;
-    br
+  mixin rag(x)
+    - var n = 0
+    while n < x
+      - n++
+      if(n%2==0)
+        span.io &nbsp;
+      else
+        span.io Hg#[sup._sup 2]
+      br
 
   main#_main
-    .gridlines
+    .gridlinesx
       section
-        p._hero Super hero text
+        p._hero Superhero text
         h1._h1 Heading example #1
         h2._h2 Heading example #2
         h3._h3 Heading example #3
@@ -56,44 +57,13 @@ block main
     hr(style="margin:1rem auto")
     .gridlines
       .g.demo
-        .u
-          +repeat(6)
-            +g1
-            +g2
-        .u._font-6
-          +repeat(3)
-            +g1
-            +g2
-            +g2
-          +g1
-        .u._font-5
-          +repeat(4)
-            +g1
-            +g2
-          +g1
-        .u._font-4
-          +g1
-          +g2
-          +g2
-          +g1
-          +g2
-          +g2
-          +g1
-        .u._font-3
-          +g1
-          +g2
-          +g1
-          +g2
-          +g1
-        .u._font-2
-          +g1
-          +g2
-          +g2
-          +g1
-        .u._font-1
-          +g1
-          +g2
-          +g1
+        .u._text-7: +rag(14)
+        .u._text-6: +rag(11)
+        .u._text-5: +rag(9)
+        .u._text-4: +rag(7)
+        .u._text-3: +rag(6)
+        .u._text-2: +rag(5)
+        .u._text-1: +rag(4)
 
     p: hr
 
