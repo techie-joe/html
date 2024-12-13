@@ -1,0 +1,68 @@
+extends ../_templates/demo
+
+block append vars
+  include _demo-vars
+  -
+    header      = `Colors`
+    title       = `${header} | ${name}`
+    description = `These colors are for your reference.`
+    url         = url+`/texts.html`
+
+    og_title       = title
+    og_description = description
+    og_url         = url
+  //- 
+
+block append style
+  style.
+    #_header { max-width:960px }
+    #_header,
+    #_main { margin:0 auto; padding:0 1rem; }
+
+    .cg {
+      margin:0 auto;
+      width: 800px;
+      height: 400px;
+      background:
+      linear-gradient(to right, #ff0000, #00ff00, #0000ff, #ff0000);
+    }
+
+    .bg1 {
+      height:100%;
+      background:
+      linear-gradient(to bottom, #000000ff, #00000000);
+    }
+
+    .bg2 {
+      height:100%;
+      background:
+      linear-gradient(to top, #ffffffff, #ffffff00);
+    }
+
+    .line { height:1px;background:#808080 }
+
+    .gridlines {
+      height:100%;
+      padding-bottom: 1px;
+      background-image: url('data:image/svg+xml;utf8,<svg width="10" height="10" xmlns="http://www.w3.org/2000/svg"><rect width="9" height="9" fill="none" stroke="none" /><line x1="9" y1="0" x2="9" y2="10" stroke="%23ddd" stroke-width="1" /><line x1="0" y1="9" x2="10" y2="9" stroke="%23ddd" stroke-width="1" /></svg>');
+      background-repeat: repeat;
+      background-position: 1px 1px;
+    }
+    ._dark 
+    .gridlines {
+      background-image: url('data:image/svg+xml;utf8,<svg width="10" height="10" xmlns="http://www.w3.org/2000/svg"><rect width="9" height="9" fill="none" stroke="none" /><line x1="9" y1="0" x2="9" y2="10" stroke="%23222" stroke-width="1" /><line x1="0" y1="9" x2="10" y2="9" stroke="%23222" stroke-width="1" /></svg>');
+    }
+
+  //- 
+
+block main
+
+  main#_main
+    .cg: .bg1: .gridlines
+    .line
+    .cg: .bg2: .gridlines
+
+    p: hr
+
+    footer#_footer
+      p._text-centerx &copy; Copyright
