@@ -126,14 +126,26 @@ a._btnlink {
 }
 
 ._sans { font-family: Arial, sans-serif; }
-
 ._mono { font-family: "Courier New", Courier, monospace; }
 
-._inblock { display: inline-block; }
+._inblock { display: inline-block }
 
-._text-center { text-align: center; }
-._text-right { text-align: right }
+._fixed    { position: fixed }
+._absolute { position: absolute }
+._relative { position: relative }
 
-._fixed { position: fixed; }
+._text-left    { text-align: left }
+._text-center  { text-align: center }
+._text-right   { text-align: right }
+._text-justify { text-align: justify }
 
-._hide { display: none; }
+._indent   { text-indent: 2em }
+
+._color-inherit { color: inherit !important }
+
+a._no-u,
+u._no-u { text-decoration: none !important }
+
+._no-b { font-weight: normal !important }
+
+._hide { display: none !important; }
