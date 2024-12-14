@@ -5,7 +5,7 @@ block append vars
   -
     header      = `Colors`
     title       = `${header} | ${name}`
-    description = `These colors are for your reference.`
+    description = `These color page are made for your reference.`
     url         = url+`/texts.html`
 
     og_title       = title
@@ -24,6 +24,12 @@ block append style
       height: 250px;
       background:
       linear-gradient(to right, #ff0000, #ffff00, #00ff00, #00ffff, #0000ff, #ff00ff, #ff0000);
+    }
+
+    .bg0 {
+      height:10px;
+      background:
+      linear-gradient(to right, #000000, #ffffff);
     }
 
     .bg1 {
@@ -59,18 +65,26 @@ block main
   main#_main
     article
       section
-        .g
-          .u-1-2
-            h6._h6 Header #[span._ color]
-            ._text-justify
-              p To make a header stands out, it has better color contrast than the rest of the content. You can also use different font and size it differently than the rest of the content.
-              
-              p Hyperlink maintain default colors #[+a("#"+Math.random()) normal link], #[+a("") visited link], #[+a("")._color-inherit blend link] like these examples.
+        .g._mv._bg-1._radius
 
-              //- p Curabitur auctor nunc nec sem pellente sque, ut facilisis justo dictum. Vesti bulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Pellent esque habitant morbi tristi que senectus et netus et malesuada fames ac turpis egestas.
-              
-              //- p Proin scele risque, lacus at sollici tudin sagittis, nunc eros cursus nulla, a venen atis nulla sapien non velit. Integer condimen tum, odio nec tristique malesuada, metus ligula laoreet lorem, ut malesuada lectus sapien in lacus.
-      section
+          .u-1-4: p._mh-2
+            span(style="font-size:3em")._impact #[span._fg-1 GiI]#[span._fg-2 9il]
+
+          .u-1-2._text-justify
+            p Hyperlink uses typical color for #[+a("#"+Math.random()) normal] and #[+a("") visited] link or you can #[code._code _remove-color] to #[+a("")._remove-color blend a link]. You can also apply color to normal text, like #[span._blue blue], #[span._purple purple] and #[span._red red].
+
+          .u-1-4
+
+        .g._mv._bg-2
+            
+            .u-1-2: p haha
+
+            .u-1-2: p gaga
+
+      section._mt-2
+        h2._h6._text-center Color table
+        .bg0: .gridlines
+        div(style="height:1rem")
         .cg: .bg1: .gridlines
         .line
         .cg: .bg2: .gridlines

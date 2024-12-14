@@ -1,0 +1,70 @@
+/*! Techie Joe's Base v0.1.0 | Copyright 2024 Techie Joe | https://github.com/techie-joe/base */
+
+@use "functions";
+@use "mixins" as mix;
+@use "colors" as *;
+@use "html5";
+
+@mixin _selection {
+  background: #6B10A4;
+  color:#fff;
+}
+
+::selection { @include _selection; }
+::-moz-selection { @include _selection; }
+
+._hero { font-size:6rem }
+._h1,._text-1 { font-size:4.403rem }
+._h2,._text-2 { font-size:3.310rem }
+._h3,._text-3 { font-size:2.652rem }
+._h4,._text-4 { font-size:2.214rem }
+._h5,._text-5 { font-size:1.658rem }
+._h6,._text-6 { font-size:1.327rem }
+._h7,._text-7 { font-size:1.021rem }
+
+._sup { line-height: 0.6em }
+
+/* ----------------------------------------------- helper */
+
+._mh,
+._ml   { margin-left: 1em; }
+._mh-2,
+._ml-2 { margin-left: 2em; }
+
+._mh,
+._mr   { margin-right: 1em; }
+._mh-2,
+._mr-2 { margin-right: 2em; }
+
+._mv,
+._mt   { margin-top: 1em }
+._mv-2,
+._mt-2 { margin-top: 2em }
+
+._mv,
+._mb   { margin-bottom: 1em }
+._mv-2,
+._mb-2 { margin-bottom: 2em }
+
+._ph,
+._pl   { padding-left: 1em; }
+._ph-2,
+._pl-2 { padding-left: 2em; }
+
+._ph,
+._pr   { padding-right: 1em; }
+._ph-2,
+._pr-2 { padding-right: 2em; }
+
+._pv,
+._pt   { padding-top: 1em }
+._pv-2,
+._pt-2 { padding-top: 2em }
+
+._pv,
+._pb   { padding-bottom: 1em }
+._pv-2,
+._pb-2 { padding-bottom: 2em }
+
+._radius { @include mix.border-radius(1em) }
+

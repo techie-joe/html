@@ -7,19 +7,11 @@
 
 /* ------------------------------------------------- base */
 
-@mixin _selection {
-  background: #6B10A4;
-  color:#fff;
-}
-
-::selection { @include _selection; }
-::-moz-selection { @include _selection; }
-
 * { line-height: 1.2; margin: 0; }
 
 h1,h2,h3,h4,h5,h6,
 ul,ol,
-p,pre { margin-top: 1rem; margin-bottom: 1rem; }
+p,pre { margin-top: 1em; margin-bottom: 1em; }
 
 li { margin: .3em 0; }
 
@@ -44,20 +36,9 @@ hr {
   height: 100%;
   overflow: auto;
   margin: 0;
-  font-size:1.021em;
+  font-size:1.021rem;
   @include mix.text-size-adjust(100%);
 }
-
-._hero { font-size:6rem }
-._h1,._text-1 { font-size:4.403rem }
-._h2,._text-2 { font-size:3.310rem }
-._h3,._text-3 { font-size:2.652rem }
-._h4,._text-4 { font-size:2.214rem }
-._h5,._text-5 { font-size:1.658rem }
-._h6,._text-6 { font-size:1.327rem }
-._h7,._text-7 { font-size:1.021rem }
-
-._sup { line-height: 0.6em }
 
 /* ---------------------------------- default light theme */
 
@@ -125,8 +106,9 @@ a._btnlink {
   }
 }
 
-._sans { font-family: Arial, sans-serif; }
-._mono { font-family: "Courier New", Courier, monospace; }
+._sans   { font-family: Arial, sans-serif; }
+._impact { font-family: Impact; }
+._mono   { font-family: "Courier New", Courier, monospace; }
 
 ._inblock { display: inline-block }
 
@@ -141,7 +123,7 @@ a._btnlink {
 
 ._indent   { text-indent: 2em }
 
-._color-inherit { color: inherit !important }
+._remove-color { color: inherit !important }
 
 a._no-u,
 u._no-u { text-decoration: none !important }
