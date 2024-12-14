@@ -45,8 +45,9 @@ hr {
 #_html {
   color: $light-foreground;
   background-color: $light-background;
-  h1,h2,h3,h4,h5,h6 { color: $light-color-1; }
 }
+
+h1,h2,h3,h4,h5,h6 { color: $light-color-1; }
 
 ._a a {
   & {
@@ -72,8 +73,10 @@ a._btnlink {
   &#_html {
     color: $dark-foreground;
     background-color: $dark-background;
-    h1,h2,h3,h4,h5,h6 { color: $dark-color-1; }
   }
+
+  h1,h2,h3,h4,h5,h6 { color: $dark-color-1; }
+
   &._a a {
     & { color: $dark-link-color; }
     &:visited { color: $dark-link-color-visited; }
